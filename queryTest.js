@@ -11,7 +11,7 @@ var params = {
     ':hope': '332412832140'
   },
   KeyConditionExpression: 'id = :hope',
-  TableName : "ListingsTest"
+  TableName : 'ListingsTest'
   // KeyConditionExpression: "#id = :id",
   // ExpressionAttributeNames:{
   //   "#id": "id"
@@ -23,5 +23,5 @@ var params = {
 
 docClient.query(params, function(err, data) {
     if (err) console.log(err); // an error occurred
-    else console.log(data.Item); // successful response
+    else console.log(data); // successful response
 });
