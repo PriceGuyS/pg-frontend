@@ -11,7 +11,7 @@ var params = {
     ':hope': '332412832140'
   },
   KeyConditionExpression: 'id = :hope',
-  TableName : "ListingsTest"
+  TableName : 'ListingsTest'
   // KeyConditionExpression: "#id = :id",
   // ExpressionAttributeNames:{
   //   "#id": "id"
