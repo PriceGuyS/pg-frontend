@@ -19,7 +19,7 @@ class Menu extends React.Component {
 				</div>
 				<button className="tablink" onclick={"openTabs('query', this, 'blue')"} 
 				id="defaultOpen">Home</button>
-				<button className="tablink" onclick="openTabs('query', this, 'blue')">Query</button>
+				<button className="tablink" onclick="openTabs('query', this, 'blue')">Browse</button>
 				<button className="tablink" onclick="openTabs('about', this, 'green'">About</button>		
       </div>			
     );
