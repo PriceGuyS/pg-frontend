@@ -2,7 +2,9 @@
   "name": "pg-frontend",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "aws-sdk": "^2.141.0"
+  },
   "devDependencies": {
     "react-scripts": "1.0.14",
     "@kadira/storybook": "^2.35.3"
