@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-// import Menu from './Menu';
+import Menu from './Menu';
 import search from './queryTest';
 
 class App extends Component {
@@ -29,6 +29,7 @@ class App extends Component {
 					           <img src={logo} className="App-logo" alt="logo" />
 					           <h1 className="App-title">Welcome to PriceGuy$</h1>
 				        </header>
+                <Menu />
                 <ul>{this.state.queryResult.map((obj) => <li>{JSON.stringify(obj)}</li>)}</ul>
 			      </div>
         );
