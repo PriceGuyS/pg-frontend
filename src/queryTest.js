@@ -1,22 +1,18 @@
 var AWS = require('aws-sdk');
-AWS.config.loadFromPath('../../.aws/config.json');
+
+AWS.config.region = 'us-east-1'; // Region
+AWS.config.credentials = new AWS.CognitoIdentityCredentials({
+    IdentityPoolId: '########################################', //put the key here
+});
 
 var docClient = new AWS.DynamoDB.DocumentClient({apiVersion: '2012-08-10'});
-AWS.config.update({endpoint: "https://dynamodb.us-west-2.amazonaws.com"});
+//search('Super Mario 64');
+search('Banjo Kazooie')
 
-//console.log("hello");
-//search('Super Mario 64')
-//search('Banjo Kazooie')
-
-module.exports = function search(input){
+function search(input){
   var params = {
     ExpressionAttributeValues: {
       ':test': input
-      //':q': 'query',
-      //':hope': 'r',
-      //':end': 't',
-      //':sub': 'Super Mario 64',
-      //':blah': '332412832140',
     },
     KeyConditionExpression: 'inputQuery = :test', //has to be = and it has to be an exact match
     //FilterExpression: 'contains (:q, :sub)',
