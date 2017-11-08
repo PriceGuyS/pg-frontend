@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Query.css';
-//import './queryTest.js';
-//var test = require('./queryTest.js');
+//import './queryTest';
+//var test = require('./queryTest');
 
 class Query extends Component {
   render() {
