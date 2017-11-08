@@ -29,7 +29,7 @@ class App extends Component {
 					           <img src={logo} className="App-logo" alt="logo" />
 					           <h1 className="App-title">Welcome to PriceGuy$</h1>
 				        </header>
-                <ul>{this.state.queryResult.map((obj) => { return <li>{JSON.stringify(obj)}</li>})}</ul>
+                <ul>{this.state.queryResult.map((obj) => <li>{JSON.stringify(obj)}</li>)}</ul>
 			      </div>
         );
 	   }
