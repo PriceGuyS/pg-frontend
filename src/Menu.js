@@ -1,52 +1,55 @@
-import React, { Component } from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import './Menu.css';
 import Home from './Home.js'
-import Query from './Query.js'
+import Browse from './Browse.js'
 import About from './About.js'
 
-class Menu extends React.Component {	
-  render() {
-    return (
-      <div className="Menu">
-				<div id="home" className="tabcontent">					
-					<header className="Home-header">
-						<h3>HOME</h3>
-					</header>
-					<p>HOME is where the heart is, and the heart is in gaming.</p>
-					<p className="Home-intro">
-						To get started, click Query and submit your choices.
-					</p>
-				</div>
-				<button className="tablink" onclick={"openTabs('query', this, 'blue')"} 
-				id="defaultOpen">Home</button>
-				<button className="tablink" onclick="openTabs('query', this, 'blue')">Query</button>
-				<button className="tablink" onclick="openTabs('about', this, 'green'">About</button>		
-      </div>			
+const TopTabs = (tabs) =>{ 
+  return (<div> 
+			<button className="tablink" id = "home" onClick={tabs.clickon}>Home</button>
+			<button className="tablink" id = "browse" onClick={tabs.clickon}>Browse</button>
+			<button className="tablink" id = "about" onClick={tabs.clickon}>About</button>	
+      </div>
+  );
+};
+
+class Menu extends React.Component {
+	
+  constructor(tabs) {
+		super(tabs);
+		this.handleClick = this.handleClick.bind(this);
+	}
+	
+	handleClick(event){
+		var clickedId = event.target.id;
+		var selectedTab = new String(clickedId);
+    console.log(clickedId);
+		alert("It works! You clicked " + clickedId)
+
+		if (selectedTab == 'home')
+		{
+			alert("It works!" + clickedId);
+			<Home/>
+		}
+		event.currentTarget.className += " active";
+	}
+	
+	openTabs(event) {
+	// Declare all variables
+	}
+	
+  render(){		
+		return (
+			<div>
+				<TopTabs clickon={this.handleClick}/>
+				
+			</div>
     );
 	}
 }
-
-function openTabs(tabName, elmnt, color) {
-	// Hide all elements with class="tabcontent" by default */
-	var i, tabcontent, tablinks;
-	tabcontent = document.getElementsByClassName("tabcontent");
-	
-	for (i = 0; i < tabcontent.length; i++) {
-			tabcontent[i].style.display = "none";
-	}
-
-	// Remove the background color of all tablinks/buttons
-	tablinks = document.getElementsByClassName("tablink");
-	for (i = 0; i < tablinks.length; i++) {
-			tablinks[i].style.backgroundColor = "";
-	}
-
-	// Show the specific tab content
-	document.getElementById(tabName).style.display = "block";
-
-	// Add the specific color to the button used to open the tab content
-	elmnt.style.backgroundColor = color;
-}
+ReactDOM.render(
+<Menu />, document.getElementById('root'))
 export default Menu
 
 
