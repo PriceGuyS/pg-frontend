@@ -30,7 +30,11 @@ class App extends Component {
 					           <h1 className="App-title">Welcome to PriceGuy$</h1>
 				        </header>
                 <Menu />
-                <ul>{this.state.queryResult.map((obj) => <li><img src={obj.imageURL} />{JSON.stringify(obj.title)}</li>)}</ul>
+                <ul className="results">{this.state.queryResult.map((obj) => <div className="result"><li><img src={obj.imageURL} /></li>
+                  <li><h3>{JSON.stringify(obj.title)}</h3></li>
+                  <li><a href={obj.URL}> {obj.URL} </a></li>
+                  <li><p>{obj.price} {obj.currency}, location: {obj.country}, ships: {obj.shipsTo}</p></li></div>)}
+                </ul>
 			      </div>
         );
 	   }

@@ -20,3 +20,20 @@
 .App-intro {
   font-size: large;
 }
+
+img {
+  height: auto;
+  width: 500px;
+}
+
+.results {
+  list-style-type: none;
+  display: inline-table;
+
+}
+
+.result {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+}
