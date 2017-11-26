@@ -2,14 +2,16 @@ var AWS = require('aws-sdk');
 
 AWS.config.region = 'us-east-1'; // Region
 AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-    IdentityPoolId: 'us-east-1:1ebfaeaa-5d62-4e67-ae99-b7d2a407c1e8', //put the key here
+    IdentityPoolId: '###################', //put the key here
 });
 
 var docClient = new AWS.DynamoDB.DocumentClient({apiVersion: '2012-08-10'});
-//search('Super Mario 64');
-search('Banjo Kazooie')
 
-function search(input) {
+//function compare(data) {
+
+}
+
+module.exports = function search(input) {
   var params = {
     ExpressionAttributeValues: {
       ':test': input
@@ -22,7 +24,8 @@ function search(input) {
   return docClient.query(params, function(err, data) {
       if (err) return err; // an error occurred
       else return data; // successful response
+      // else compare(data);
   });
 }
 
-export default search;
+//export default search;
