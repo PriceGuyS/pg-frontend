@@ -1,31 +1,22 @@
-/* Style the tab buttons */
-.tablink {
-    background-color: #000;
-    color: white;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    font-size: 17px;
-    width: 33.333%;
+.About {
+  text-align: center;
 }
 
-/* Change background color of buttons on hover */
-.tablink:hover {
-    background-color: ##0fb6fd;
+.About-logo {
+  
 }
 
-/* Set default styles for tab content */
-.tabcontent {
-    color: white;
-    display: none;
-    padding: 50px;
-    text-align: center;
+.About-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
 }
 
-/* Style each tab content individually */ 
-#HOME {background-color:red;}
-#QUERY {background-color:green;}
-#ABOUT {background-color:blue;}
-//#Oslo {background-color:orange;}
+.About-title {
+  font-size: 1.5em;
+}
+
+.About-intro {
+  font-size: 50;
+}

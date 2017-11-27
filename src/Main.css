@@ -1,12 +1,13 @@
-.Main {
+/* .Main {
   text-align: center;
-}
+} */
 
-.logo {
+.Main-logo {
   height: 80px;
 }
 
 .Main-header {
+  text-align: center;
   background-color: #000;
   height: 180px;
   padding: 5px;
@@ -14,6 +15,7 @@
 }
 
 .Main-title {
+  text-align: center;
   font-size: 1.5em;
 }
 

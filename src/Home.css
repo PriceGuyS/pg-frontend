@@ -1,9 +1,9 @@
 .Home {
-  text-align: center;
+ text-align: center;
 }
 
 .Home-logo {
-  height: 80px;
+  
 }
 
 .Home-header {
@@ -18,31 +18,6 @@
 }
 
 .Home-intro {
-  font-size: large;
+  font-size: 50;
 }
 
-/* Style the tab buttons */
-.tablink {
-    background-color: #000;
-    color: white;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    font-size: 17px;
-    width: 33.333%;
-}
-
-/* Change background color of buttons on hover */
-.tablink:hover {
-    background-color: ##0fb6fd;
-}
-
-/* Set default styles for tab content */
-.tabcontent {
-    color: white;
-    display: none;
-    padding: 50px;
-    text-align: center;
-}
