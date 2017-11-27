@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './Menu.css';
-import Home from './Home.js'
-import Browse from './Browse.js'
-import About from './About.js'
+import Home from './Home.jsx'
+import Browse from './Browse.jsx'
+import About from './About.jsx'
 
 const TopTabs = (tabs) =>{ 
   return (<div> 
