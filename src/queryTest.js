@@ -7,7 +7,7 @@ AWS.config.credentials = new AWS.CognitoIdentityCredentials({
 
 var docClient = new AWS.DynamoDB.DocumentClient({apiVersion: '2012-08-10'});
 
-function compare(data) {
+function compare(data, number) {
   console.log("yo");
   console.log(typeof data); //object
   //console.log(data.Items[0].price); //how to access
@@ -17,7 +17,7 @@ function compare(data) {
 
   //console.log(data.Items);
   //console.log(data.Items.slice(0,10));
-  return(data.Items.slice(0,10)) //pass a parameter for slice, will need try and except for key errors, in which case return all we have
+  return(data.Items.slice(0,number)) //pass a parameter for slice, will need try and except for key errors, in which case return all we have
 
 }
 //http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html
@@ -36,8 +36,9 @@ module.exports = function search(input) {
   return docClient.query(params, function(err, data) {
       if (err) return err; // an error occurred
       else{
-        var results = compare(data);
-        console.log(typeof results); //prints 10
+        var number = 25; //add as an argument for search
+        var results = compare(data, number);
+        console.log(results); //prints 10
         return(results);
       }
   });
