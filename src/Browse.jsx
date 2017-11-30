@@ -33,7 +33,7 @@ class Browse extends Component {
   }
 
   componentWillMount() {
-		search("Banjo Kazooie").on('success', (res) => {
+		search("Legend of Zelda Majora's Mask").on('success', (res) => {
 		//search(this.state.value.toString).on('success', (res) => {
       this.setState({
         queryResult: res.data.Items.sort(function(a, b) {
@@ -50,14 +50,15 @@ class Browse extends Component {
   render() {
     return(
       <div className="Browse">
+      <ul className="results">
         <input
           onChange={this.handleChange}
           defaultValue={this.state.value}
         />
-        <ul className="results">{this.state.queryResult.slice(0,5).map((obj) => <div2 className="result"><li><img src={obj.imageURL} alt="nop"/></li>
+        {this.state.queryResult.slice(0,10).map((obj) => <div className="result"><li><img src={obj.imageURL} alt="nop"/></li>
           <li><h3>{JSON.stringify(obj.title)}</h3></li>
           <li><a href={obj.URL}> {obj.URL} </a></li>
-          <li><p>{obj.price} {obj.currency}, location: {obj.country}, ships: {obj.shipsTo}</p></li></div2>)}
+          <li><p>{obj.price} {obj.currency}, location: {obj.country}, ships: {obj.shipsTo}</p></li></div>)}
         </ul>
 			</div>
     );
