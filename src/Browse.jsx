@@ -25,7 +25,7 @@ class Browse extends Component {
     const md = new Remarkable();
     return { __html: md.render(this.state.value) };
   }
-	
+
   searchBar() {
     var x = document.createElement('Input');
     x.setAttribute("type", "search");
@@ -54,7 +54,7 @@ class Browse extends Component {
           onChange={this.handleChange}
           defaultValue={this.state.value}
         />
-        <ul className="results">{this.state.queryResult.map((obj) => <div2 className="result"><li><img src={obj.imageURL} alt="nop"/></li>
+        <ul className="results">{this.state.queryResult.slice(0,5).map((obj) => <div2 className="result"><li><img src={obj.imageURL} alt="nop"/></li>
           <li><h3>{JSON.stringify(obj.title)}</h3></li>
           <li><a href={obj.URL}> {obj.URL} </a></li>
           <li><p>{obj.price} {obj.currency}, location: {obj.country}, ships: {obj.shipsTo}</p></li></div2>)}
