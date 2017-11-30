@@ -24,9 +24,6 @@ function compare(data, number) {
 //search("Banjo Kazooie");
 
 module.exports = function search(input) {
-  var results = [];
-  var oResults = {};
-  var something = [];
   var params = {
     ExpressionAttributeValues: {
       ':test': input
@@ -36,16 +33,16 @@ module.exports = function search(input) {
     TableName : 'testTable6' // this table has the proper key structure
   };
 
-  docClient.query(params, function(err, data) {
+  return docClient.query(params, function(err, data) {
       if (err) return err; // an error occurred
       else{
-        var number = 5; //add as an argument for search
+        var number = 10; //add as an argument for search
         var results = compare(data, number);
-        // console.log(results)
-        oResults = {results};
+        //return(results)
+        var oResults = {results};
         console.log(results.length); //prints 10
         console.log(oResults)
-        return(oResults.results);
+        return(oResults);
       }
   });
 }

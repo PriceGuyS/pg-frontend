@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "aws-sdk": "^2.156.0"
+    "aws-sdk": "^2.156.0",
+    "remarkable": "^1.7.1",
+    "remarkable-react": "^1.0.1"
   },
   "devDependencies": {
     "react-scripts": "1.0.14",
