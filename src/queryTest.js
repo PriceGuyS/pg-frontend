@@ -21,9 +21,12 @@ function compare(data, number) {
   }
 }
 //http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html
-search("Banjo Kazooie");
+//search("Banjo Kazooie");
 
-function search(input) {
+module.exports = function search(input) {
+  var results = [];
+  var oResults = {};
+  var something = [];
   var params = {
     ExpressionAttributeValues: {
       ':test': input
@@ -33,13 +36,16 @@ function search(input) {
     TableName : 'testTable6' // this table has the proper key structure
   };
 
-  return docClient.query(params, function(err, data) {
+  docClient.query(params, function(err, data) {
       if (err) return err; // an error occurred
       else{
-        var number = 25; //add as an argument for search
+        var number = 5; //add as an argument for search
         var results = compare(data, number);
+        // console.log(results)
+        oResults = {results};
         console.log(results.length); //prints 10
-        return(results);
+        console.log(oResults)
+        return(oResults.results);
       }
   });
 }
