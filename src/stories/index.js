@@ -1,11 +1,11 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
-import App from '../App';
+import Main from '../Main';
 import Menu from '../Menu';
 
 storiesOf('Home', module)
   .add('load home page', () => (
-    <App />
+    <Main />
   ));
 
 storiesOf('Menu', module)
