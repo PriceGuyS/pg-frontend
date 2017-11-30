@@ -4,6 +4,10 @@
   "private": true,
   "dependencies": {
     "aws-sdk": "^2.156.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-strap": "0.0.1",
+    "reactstrap": "^5.0.0-alpha.4",
     "remarkable": "^1.7.1",
     "remarkable-react": "^1.0.1"
   },

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Browse.css';
 import search from './queryTest';
+import {Button} from 'reactstrap';
 
 var Remarkable = require('remarkable');
 
@@ -8,8 +9,10 @@ class Browse extends Component {
       constructor(props) {
         super(props);
 				this.handleChange = this.handleChange.bind(this);
+        this.submitChange = this.submitChange.bind(this);
 				this.state = {
-						value: "Browse me Bro!",
+						value: "",
+            click: "",
 						//value: "Banjo Kazooie",
             queryResult: []
 
@@ -19,6 +22,9 @@ class Browse extends Component {
 	handleChange(e) {
     this.setState({ value: e.target.value });
 		//this.componentWillMount();
+  }
+  submitChange(e) {
+    this.setState({ click: this.state.value });
   }
 
 	getRawMarkup() {
@@ -32,8 +38,8 @@ class Browse extends Component {
     document.body.appendChild(x);
   }
 
-  componentWillMount() {
-		search("Legend of Zelda Majora's Mask").on('success', (res) => {
+  componentDidUpdate() {
+		search(this.state.click).on('success', (res) => {
 		//search(this.state.value.toString).on('success', (res) => {
       this.setState({
         queryResult: res.data.Items.sort(function(a, b) {
@@ -51,10 +57,8 @@ class Browse extends Component {
     return(
       <div className="Browse">
       <ul className="results">
-        <input
-          onChange={this.handleChange}
-          defaultValue={this.state.value}
-        />
+        <input onChange={this.handleChange}
+        /> <Button onClick={this.submitChange}>Search</Button>
         {this.state.queryResult.slice(0,10).map((obj) => <div className="result"><li><img src={obj.imageURL} alt="nop"/></li>
           <li><h3>{JSON.stringify(obj.title)}</h3></li>
           <li><a href={obj.URL}> {obj.URL} </a></li>
