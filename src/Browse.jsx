@@ -17,7 +17,7 @@ class Browse extends Component {
   
 	handleChange(e) {
     this.setState({ value: e.target.value });
-		this.componentWillMount();
+		//this.componentWillMount();
   }
 	
 	getRawMarkup() {
