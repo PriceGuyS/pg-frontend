@@ -39,10 +39,22 @@ class Browse extends Component {
   }
 
   componentDidUpdate() {
-		search(this.state.click).on('success', (res) => {
+		search("EbayTest_1", this.state.click).on('success', (res) => {
 		//search(this.state.value.toString).on('success', (res) => {
       this.setState({
         queryResult: res.data.Items.sort(function(a, b) {
+          return parseFloat(a.price) - parseFloat(b.price);
+        })
+      });
+      console.log(this.state.queryResult)
+    }).on('error', (err) => {
+      console.log(err);
+    });
+
+    search("testTable6", this.state.click).on('success', (res) => {
+		//search(this.state.value.toString).on('success', (res) => {
+      this.setState({
+        queryResult2: res.data.Items.sort(function(a, b) {
           return parseFloat(a.price) - parseFloat(b.price);
         })
       });

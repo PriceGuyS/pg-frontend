@@ -10,14 +10,14 @@ var docClient = new AWS.DynamoDB.DocumentClient({apiVersion: '2012-08-10'});
 //http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB/DocumentClient.html
 //search("Banjo Kazooie");
 
-module.exports = function search(input) {
+module.exports = function search(table, input) {
   var params = {
     ExpressionAttributeValues: {
       ':test': input
     },
     KeyConditionExpression: 'inputQuery = :test', //has to be = and it has to be an exact match
     //FilterExpression: 'contains (:q, :sub)',
-    TableName : 'testTable6' // this table has the proper key structure
+    TableName : table // this table has the proper key structure
   };
 
   return docClient.query(params, function(err, data) {
