@@ -39,26 +39,14 @@ class Browse extends Component {
   }
 
   componentDidUpdate() {
-		search("EbayTest_1", this.state.click).on('success', (res) => {
+		search(this.state.click).on('success', (res) => {
 		//search(this.state.value.toString).on('success', (res) => {
       this.setState({
         queryResult: res.data.Items.sort(function(a, b) {
           return parseFloat(a.price) - parseFloat(b.price);
         })
       });
-      console.log(this.state.queryResult)
-    }).on('error', (err) => {
-      console.log(err);
-    });
-
-    search("testTable6", this.state.click).on('success', (res) => {
-		//search(this.state.value.toString).on('success', (res) => {
-      this.setState({
-        queryResult2: res.data.Items.sort(function(a, b) {
-          return parseFloat(a.price) - parseFloat(b.price);
-        })
-      });
-      console.log(this.state.queryResult)
+      console.log(queryResult)
     }).on('error', (err) => {
       console.log(err);
     });
@@ -71,7 +59,7 @@ class Browse extends Component {
       <ul className="results">
         <input onChange={this.handleChange}
         /> <Button onClick={this.submitChange}>Search</Button>
-        {this.state.queryResult.slice(0,10).map((obj) => <div className="result"><li><img src={obj.imageURL} alt="nop"/></li>
+        {this.state.queryResult.slice(0,10).map((obj) => <div className="result" key={obj.id}><li><img src={obj.imageURL} alt="nop"/></li>
           <li><h3>{JSON.stringify(obj.title)}</h3></li>
           <li><a href={obj.URL}> {obj.URL} </a></li>
           <li><p>{obj.price} {obj.currency}, location: {obj.country}, ships: {obj.shipsTo}</p></li></div>)}
