@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Browse.css';
 import search from './queryTest';
-import {Button} from 'reactstrap';
+import { Button } from 'reactstrap';
 
 var Remarkable = require('remarkable');
 
