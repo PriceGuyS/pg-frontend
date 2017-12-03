@@ -10,6 +10,7 @@
 
 #submit-button {
   width: 4%;
+  min-width: 80px;
   height: 30px;
   margin-left: 10px;
   background: #2FC0D7;
