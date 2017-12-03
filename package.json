@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "aws-sdk": "^2.156.0",
+    "bootstrap": "^4.0.0-beta.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-strap": "0.0.1",

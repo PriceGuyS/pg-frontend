@@ -46,7 +46,7 @@ class Browse extends Component {
           return parseFloat(a.price) - parseFloat(b.price);
         })
       });
-      console.log(queryResult)
+      console.log(this.state.queryResult)
     }).on('error', (err) => {
       console.log(err);
     });
