@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './Menu.css';
-import Home from './Home.jsx'
-import Browse from './Browse.jsx'
-import About from './About'
+import Home from './Home';
+import Browse from './Browse';
+import About from './About';
 import {
   BrowserRouter as Router,
   Route,
   Link
-} from 'react-router-dom'
+} from 'react-router-dom';
 
 class Menu extends Component {
   render() {
