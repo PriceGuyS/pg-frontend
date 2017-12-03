@@ -2,20 +2,6 @@
  text-align: center;
 }
 
-.input-field {
-  width: 25%;
-  font-size: 17px;
-}
-
-#submit-button {
-  width: 4%;
-  height: 30px;
-  margin-left: 10px;
-  background: #2FC0D7;
-  color: white;
-  font-size: 15px;
-}
-
 .Home-title {
   font-size: 1.5em;
 }

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import './Home.css';
-import SearchBar from './SearchBar';
+import './SearchBar.css';
 
-class Home extends Component {
+class SearchBar extends Component {
   constructor(props) {
     super(props);
     this.state = {value: ''};
@@ -22,15 +21,14 @@ class Home extends Component {
 
   render() {
     return(
-      <div className="Home">
-					<p>HOME is where the heart is, and the heart is in gaming.</p>
-					<p className="Home-intro">
-						To get started, click Query and submit your choices.
-					</p>
-          <SearchBar />
+      <div className="SB">
+          <form onSubmit={this.handleSubmit}>
+            <input type="text" placeholder="Search for games" value={this.state.value} onChange={this.handleChange} className="input-field"/>
+            <input type="submit" value="Search" id="submit-button"/>
+          </form>
 			</div>
     );
 	}
 }
 
-export default Home;
+export default SearchBar;

@@ -1,31 +1,18 @@
 import React, { Component } from 'react';
 import './Browse.css';
 import search from './queryTest';
-import { Button } from 'reactstrap';
+import SearchBar from './SearchBar';
 
 var Remarkable = require('remarkable');
 
 class Browse extends Component {
       constructor(props) {
         super(props);
-				this.handleChange = this.handleChange.bind(this);
-        this.submitChange = this.submitChange.bind(this);
-				this.state = {
-						value: "",
-            click: "",
-						//value: "Banjo Kazooie",
-            queryResult: []
 
+				this.state = {
+            queryResult: []
 				};
       }
-
-	handleChange(e) {
-    this.setState({ value: e.target.value });
-		//this.componentWillMount();
-  }
-  submitChange(e) {
-    this.setState({ click: this.state.value });
-  }
 
 	getRawMarkup() {
     const md = new Remarkable();
@@ -56,9 +43,8 @@ class Browse extends Component {
   render() {
     return(
       <div className="Browse">
+      <SearchBar />
       <ul className="results">
-        <input onChange={this.handleChange}
-        /> <Button onClick={this.submitChange}>Search</Button>
         {this.state.queryResult.slice(0,10).map((obj) => <div className="result" key={obj.id}><li><img src={obj.imageURL} alt="nop"/></li>
           <li><h3>{JSON.stringify(obj.title)}</h3></li>
           <li><a href={obj.URL}> {obj.URL} </a></li>
@@ -69,5 +55,4 @@ class Browse extends Component {
 	}
 }
 
-//ReactDOM.render(<Browse />, document.getElementById('example'));
-export default Browse
+export default Browse;
