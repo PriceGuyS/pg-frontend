@@ -3,16 +3,28 @@ import './Menu.css';
 import Home from './Home.jsx'
 import Browse from './Browse.jsx'
 import About from './About'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
 
 class Menu extends Component {
   render() {
     return(
-      <div>
-        <button className="Menu-button" id="Home">Home</button>
-        <button className="Menu-button" id="Browse">Browse</button>
-        <button className="Menu-button" id="About">About</button>
-      </div>
+      <Router>
+        <div>
+          <button className="Menu-button" id="Home"><Link to="/" style={{ textDecoration: 'none', color: "white" }}>Home</Link></button>
+          <button className="Menu-button" id="Browse"><Link to="/browse" style={{ textDecoration: 'none', color: "white" }}>Browse</Link></button>
+          <button className="Menu-button" id="About"><Link to="/about" style={{ textDecoration: 'none', color: "white" }}>About</Link></button>
+
+          <Route exact path="/" component={Home}/>
+          <Route path="/browse" component={Browse}/>
+          <Route path="/about" component={About}/>
+        </div>
+      </Router>
     );
   }
 };
+
 export default Menu;
