@@ -2,38 +2,14 @@
   text-align: center;
 }
 
-.Browse-logo {
-  height: 80px;
+.game-node {
+  margin-top: 5px;
 }
 
-.Browse-header {
-  background-color: #000; /*was 222*/
-  height: 150px;
-  padding: 20px;
-  color: white;
+.game-title {
+  font-size: 0.8vw;
 }
 
-.Browse-title {
-  font-size: 1.5em;
-}
-
-.Browse-intro {
-  font-size: 50;
-}
-
-img {
-  height: auto;
-  width: 75%;
-}
-
-.results {
-  list-style-type: none;
-  display: inline-table;
-
-}
-
-.result {
-  border: 1px solid black;
-  padding: 10px;
-  margin: 10px;
+.price-tag {
+  font-size: 0.7vw;
 }

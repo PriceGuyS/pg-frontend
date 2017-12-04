@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './Item.css';
 import { Container, Row, Col, ButtonGroup } from 'reactstrap';
 import ebayLogo from './images/ebay.png';
-import amazonLogo from './images/amazon.jpg'
+import amazonLogo from './images/amazon.jpg';
+
 class Item extends Component {
   constructor(props) {
     super(props);

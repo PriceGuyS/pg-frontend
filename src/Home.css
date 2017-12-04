@@ -18,3 +18,12 @@
 .view-button {
   margin-top: 15px;
 }
+
+.game-image {
+  width: 318px;
+  height: 250px;
+}
+
+.game-title {
+  font-size: 0.85vw;
+}
