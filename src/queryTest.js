@@ -21,6 +21,10 @@ module.exports = function search(table, input) {
   };
 
   return docClient.query(params, function(err, data) {
-      if (err) return err; // an error occurred
+      if (err) {
+        console.log(err); // an error occurred
+      } else {
+        return data;
+      }
   });
 }

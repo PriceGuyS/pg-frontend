@@ -6,7 +6,7 @@ import About from './About';
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Link,
 } from 'react-router-dom';
 
 class Menu extends Component {
