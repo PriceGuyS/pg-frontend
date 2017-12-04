@@ -1,0 +1,21 @@
+.Menu-button {
+  color: white;
+  font-size: 17px;
+  width: 33.333%;
+  border: none;
+  outline: none;
+  height: 40px;
+  border-radius: 0
+}
+
+#Home {
+  background-color: red;
+}
+
+#Browse {
+  background-color: green;
+}
+
+#About {
+  background-color: blue;
+}

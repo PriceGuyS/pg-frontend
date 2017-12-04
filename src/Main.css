@@ -1,0 +1,24 @@
+/* .Main {
+  text-align: center;
+} */
+
+.Main-logo {
+  height: 80px;
+}
+
+.Main-header {
+  text-align: center;
+  background-color: #000;
+  height: 180px;
+  padding: 5px;
+  color: white;
+}
+
+.Main-title {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.Main-intro {
+  font-size: large;
+}

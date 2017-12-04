@@ -1,0 +1,18 @@
+.About {
+  margin-top: 5%;
+  text-align: center;
+}
+
+.About-intro {
+  font-size: 20px;
+  line-height: 200%;
+  margin-top: 18%;
+}
+
+.find-row {
+  margin-top: 5%;
+}
+
+.git-logo {
+  width: 40px;
+}
