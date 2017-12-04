@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './Home';
 import Browse from './Browse';
 import About from './About';
+import Item from './Item';
 
 class Main extends Component {
   render() {
@@ -20,6 +21,7 @@ class Main extends Component {
             <Route exact path="/" component={Home}/>
             <Route path="/browse" component={Browse}/>
             <Route path="/about" component={About}/>
+            <Route path="/item" component={Item}/>
 		   </div>
      </Router>
     );

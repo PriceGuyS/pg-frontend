@@ -1,0 +1,29 @@
+.Item {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.Options {
+  margin-top: 15%;
+}
+
+.button-1 {
+  width: 500px;
+  margin-bottom: 10%;
+  padding-top: 3%;
+  padding-right: 3%;
+  text-align: right;
+}
+
+.ebay-logo {
+  height: 50%;
+  width: 50%;
+  padding-right: 100px;
+}
+
+.amazon-logo {
+  height: 50%;
+  width: 50%;
+  padding-right: 100px;
+  padding-top: 5px;
+}
