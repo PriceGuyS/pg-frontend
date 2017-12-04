@@ -27,7 +27,7 @@ class Item extends Component {
                   <img alt="ebay logo" src={ebayLogo} className="ebay-logo" align="left"/>
                     Condition: {this.state.gameInfo.ebay.condition}
                     <p>
-                      Price: ${this.state.gameInfo.ebay.price}
+                      Price: ${parseFloat(this.state.gameInfo.ebay.price).toFixed(2)}
                     </p>
                   </button>
                 </a>
