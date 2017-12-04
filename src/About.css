@@ -1,12 +1,12 @@
 .About {
-  margin-top: 5%;
+  margin-top: 1%;
   text-align: center;
 }
 
 .About-intro {
   font-size: 20px;
   line-height: 200%;
-  margin-top: 18%;
+  margin-top: 25%;
 }
 
 .find-row {
@@ -15,4 +15,9 @@
 
 .git-logo {
   width: 40px;
+}
+
+.intro {
+  font-size: 30px;
+  font-weight: bold;
 }

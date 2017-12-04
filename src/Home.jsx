@@ -50,7 +50,7 @@ class Home extends Component {
   render() {
     return(
       <div className="Home">
-					<p className="intro">HOME is where the heart is, and the heart is in gaming.</p>
+					<p className="intro">Home is where the heart is, and the heart is in gaming.</p>
           <SearchBar history={this.props.history}/>
           <Container className="items-container">
             <Row>

@@ -13,3 +13,9 @@
 .price-tag {
   font-size: 0.7vw;
 }
+
+.welcome {
+  margin-top: 1.5%;
+  font-size: 30px;
+  font-weight: bold;
+}

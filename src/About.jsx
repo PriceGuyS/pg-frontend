@@ -8,6 +8,7 @@ class About extends Component {
   render() {
     return (
       <Container className="About">
+      <p className="intro">About</p>
         <Row>
 						<Col>
               <p>The Guys!</p>
