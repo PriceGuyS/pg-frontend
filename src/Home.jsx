@@ -51,7 +51,7 @@ class Home extends Component {
     return(
       <div className="Home">
 					<p className="intro">HOME is where the heart is, and the heart is in gaming.</p>
-          <SearchBar />
+          <SearchBar history={this.props.history}/>
           <Container className="items-container">
             <Row>
               {this.state.displayedInfo.map(game =>
@@ -60,7 +60,7 @@ class Home extends Component {
                   <CardImg src={game.amazon.imageURL === "N/A" ? game.ebay.imageURL : game.amazon.imageURL} alt={game.title} className="game-image"/>
                   <CardBody>
                     <CardTitle className="game-title">{game.title}</CardTitle>
-                    <CardSubtitle>Lowest Price: ${Math.min(parseFloat(game.amazon.price), parseFloat(game.ebay.price))}</CardSubtitle>
+                    <CardSubtitle>Lowest Price: ${Math.min(parseFloat(game.amazon.price), parseFloat(game.ebay.price)).toFixed(2)}</CardSubtitle>
                     <Button className="view-button" onClick={(e) => this.handleClick(e, game)}>View</Button>
                   </CardBody>
                 </Card>

@@ -1,0 +1,29 @@
+.SearchResults {
+
+}
+
+.search-prompt {
+  font-weight: bold;
+  margin-top: 2.5%;
+  margin-left: 20%;
+}
+
+.result {
+  margin-top: 1.5%;
+  margin-left: 21%;
+  width: 70%;
+}
+
+.result-photo {
+  width: 20%;
+  height: 20%;
+}
+
+.game-title {
+  margin-top: 2%;;
+  font-size: 25px;
+}
+
+.lowest-price {
+  font-size: 20px;
+}

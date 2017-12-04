@@ -51,7 +51,7 @@ class Browse extends Component {
 
          return(
            <div className="Browse">
-             <SearchBar />
+             <SearchBar history={this.props.history}/>
              <Container className="items-container">
               { toRender.map((row, index) =>
               <Row key={index}>

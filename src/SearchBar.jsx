@@ -15,8 +15,12 @@ class SearchBar extends Component {
   }
 
   handleSubmit(event) {
-    alert('LUL SAME: ' + this.state.value);
     event.preventDefault();
+    this.props.history.push({
+      pathname: '/search',
+      search: '?query=' + this.state.value,
+      state: { searchQuery: this.state.value }
+    });
   }
 
   render() {

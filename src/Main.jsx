@@ -7,6 +7,7 @@ import Home from './Home';
 import Browse from './Browse';
 import About from './About';
 import Item from './Item';
+import Search from './Search';
 
 class Main extends Component {
   render() {
@@ -22,6 +23,7 @@ class Main extends Component {
             <Route path="/browse" component={Browse}/>
             <Route path="/about" component={About}/>
             <Route path="/item" component={Item}/>
+            <Route path="/search" component={Search}/>
 		   </div>
      </Router>
     );
